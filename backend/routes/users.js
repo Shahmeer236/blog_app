@@ -8,7 +8,7 @@ const verifyToken = require('../verifyToken');
 
 
 // updateUser
-router.put("/:id",verifyToken,async (req,res) => { 
+router.put("/:id",verifyToken,async(req,res) => { 
 
     try{
         if(req.body.password)

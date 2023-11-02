@@ -7,9 +7,9 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import PostDetails from './pages/PostDetails'
 import CreatePost from './pages/CreatePost'
-import UpdatePost from './pages/EditPost'
+import EditPost from './pages/EditPost'
 import Profile from './pages/Profile'
-import ProfilePosts from './pages/ProfilePosts'
+import ProfilePosts from './components/ProfilePosts'
 import { UserContextProvider } from './context/UserContext'
 // import DisplayContent from './pages/DisplayContent'
 
@@ -23,8 +23,8 @@ const App = () => {
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Register" element={<Register/>}/>
         <Route path="/Posts/Post/:id" element={<PostDetails/>}/>
-        <Route path="/write" element={<CreatePost />}/>
-        <Route path="/edit" element={<UpdatePost />}/>
+        <Route path="/create" element={<CreatePost />}/>
+        <Route path="/edit/:id" element={<EditPost />}/>
         <Route path="/profile/:id" element={<Profile/>}/>
 
 

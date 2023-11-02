@@ -27,6 +27,7 @@
 // export default HomePosts
 
 import React from 'react';
+import {IF} from "../Url";
 
 const HomePosts = ({post}) => {
   return (
@@ -34,7 +35,7 @@ const HomePosts = ({post}) => {
       {/* Left (Image) */}
       <div className="w-[35%] h-[200px] relative">
         <img
-          src={post.photo}
+          src={IF+post.photo}
           alt=""
           className="h-full w-full object-cover rounded-lg"
         />
@@ -64,7 +65,12 @@ const HomePosts = ({post}) => {
        <p>{new Date(post.updatedAt).toString().slice(16,24)}</p>
           </div>
         </div>
-        <p className="text-sm md:text-lg">{post.desc.slice(0,200)+"...Read more"}</p>
+        {/* <p className="text-sm md:text-lg">{post.desc.slice(0,200)}...<span style={{ color: 'blue' }}>Read more</span></p> */}
+        {/* <p className="text-sm md:text-lg" dangerouslySetInnerHTML={{ __html: post.desc.slice(0,200)}}>...<span style={{ color: 'blue' }}>Read more</span></p> */}
+        {/* <p className="text-sm md:text-lg" dangerouslySetInnerHTML={{ __html: showFullContent ? post.desc : post.desc.slice(0, initialCharacterLimit) + '...<span style="color: blue">Read more</span>' }}></p> */}
+        <p className="text-sm md:text-lg" dangerouslySetInnerHTML={{ __html: `${post.desc.slice(0, 200)}...<span style="color: blue" onClick="handleReadMore()">Read more</span>` }}></p>
+
+      
       </div>
     </div>
   );
