@@ -42,24 +42,6 @@ app.use("/images",express.static(path.join(__dirname,"/images")))
 
 
 
-//Image Upload
-
-// const storage=multer.diskStorage({
-//     destination:(req,file,fn)=>
-//     {
-//         fn(null,"images")
-//     },
-//     filename:(req,file,fn)=>
-//     {
-//         fn(null,"222.jpg")
-//     }
-// })
-
-// const upload=multer({storage:storage})
-// app.post("/api/upload",upload.single("file"),(req,res)=>
-// {
-//     res.status(200).json("image has been uploaded successfuly")
-// })
 
 
 

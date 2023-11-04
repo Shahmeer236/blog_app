@@ -47,21 +47,6 @@ router.delete("/:id",verifyToken,async (req,res) => {
   }
 )
 
-//getUser
-// router.get("/:id",async (req,res) => { 
-
-//     try{
-        
-//         await User.findById(req.params.id);
-//         res.status(200).json(User);
-//     }
-
-//     catch(err)
-//     {
-//         res.status(500).json(err);
-//     }
-//   }
-// )
 
 
 

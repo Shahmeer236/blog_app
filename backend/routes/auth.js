@@ -83,7 +83,7 @@ router.get("/refetch", (req,res)=>{
         }
         res.status(200).json(data)
 
-        console.log(res);
+        // console.log(res);
     })
 })
 
